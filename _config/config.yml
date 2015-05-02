@@ -1,0 +1,7 @@
+MenuSet:
+  extensions:
+    - Guttmann\SilverStripe\MenuSetExtension
+MenuAdmin:
+  extensions:
+    - SubsiteMenuExtension
+    - Guttmann\SilverStripe\MenuAdminExtension
