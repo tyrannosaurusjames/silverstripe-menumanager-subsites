@@ -4,9 +4,8 @@ namespace Guttmann\SilverStripe;
 
 use MenuSet;
 use Subsite;
-use TemplateGlobalProvider;
 
-class SubsiteMenuManagerTemplateProvider implements TemplateGlobalProvider
+class SubsiteMenuManagerTemplateProvider implements \TemplateGlobalProvider
 {
 
     public static function get_template_global_variables()

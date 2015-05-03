@@ -16,11 +16,6 @@
     "heyday/silverstripe-menumanager": "2.0.*",
     "silverstripe/subsites": "1.0.*"
   },
-  "autoload": {
-    "psr-4": {
-      "Guttmann\\SilverStripe\\": "code/"
-    }
-  },
   "extra": {
     "installer-name": "menumanager_subsites"
   }
