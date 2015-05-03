@@ -1,6 +1,6 @@
 # SilverStripe menu manager subsites integration
 
-This module enables per subsite menu sets using the [Heyday Menu Management](https://github.com/heyday/silverstripe-menumanager) module.
+This module enables per subsite menu sets using [Heyday's Menu Management](https://github.com/heyday/silverstripe-menumanager) module.
 
 ## Installation
 
