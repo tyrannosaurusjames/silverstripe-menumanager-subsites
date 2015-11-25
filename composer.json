@@ -11,10 +11,10 @@
   "require": {
     "php": ">=5.3.2",
     "composer/installers": "*",
-    "silverstripe/framework": "3.1.*",
-    "silverstripe/cms": "3.1.*",
-    "heyday/silverstripe-menumanager": "2.0.*",
-    "silverstripe/subsites": "1.0.*"
+    "silverstripe/framework": "~3.1",
+    "silverstripe/cms": "~3.1",
+    "heyday/silverstripe-menumanager": "~2.0",
+    "silverstripe/subsites": "~1.0"
   },
   "extra": {
     "installer-name": "menumanager_subsites"
