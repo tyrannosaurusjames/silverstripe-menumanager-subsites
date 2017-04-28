@@ -23,7 +23,9 @@ class MenuSetExtension extends DataExtension
 
     public function onBeforeWrite()
     {
-        $this->owner->SubsiteID = Subsite::currentSubsiteID();
+        if (!$this->owner->SubsiteID) {
+            $this->owner->SubsiteID = Subsite::currentSubsiteID();
+        }
     }
 
     public function requireDefaultRecords()
