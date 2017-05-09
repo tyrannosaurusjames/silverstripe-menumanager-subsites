@@ -1,3 +1,6 @@
+MenuItem:
+  extensions:
+    - Guttmann\SilverStripe\MenuItemExtension
 MenuSet:
   extensions:
     - Guttmann\SilverStripe\MenuSetExtension
