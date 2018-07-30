@@ -11,7 +11,7 @@
   "require": {
     "silverstripe/cms": "^4",
     "heyday/silverstripe-menumanager": "^3",
-    "silverstripe/subsites": "~1.0"
+    "silverstripe/subsites": "^2.0"
   },
   "autoload": {
     "psr-4": {
