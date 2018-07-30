@@ -2,18 +2,18 @@
 
 namespace Guttmann\SilverStripe;
 
-use DataExtension;
-use FieldList;
-use HiddenField;
-use Subsite;
-use MenuSet;
-use DB;
+use Heyday\MenuManager\MenuSet;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\HiddenField;
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\DB;
+use SilverStripe\Subsites\Model\Subsite;
+use SilverStripe\Subsites\State\SubsiteState;
 
 class MenuSetExtension extends DataExtension
 {
-
     private static $has_one = array(
-        'Subsite' => 'Subsite'
+        'Subsite' => Subsite::class
     );
 
     public function updateCMSFields(FieldList $fields)
@@ -24,7 +24,7 @@ class MenuSetExtension extends DataExtension
     public function onBeforeWrite()
     {
         if (!$this->owner->SubsiteID) {
-            $this->owner->SubsiteID = Subsite::currentSubsiteID();
+            $this->owner->SubsiteID = SubsiteState::singleton()->getSubsiteId();
         }
     }
 
@@ -32,8 +32,6 @@ class MenuSetExtension extends DataExtension
     {
         $subsites = Subsite::all_sites();
         $defaultSetNames = $this->owner->config()->get('default_sets') ?: array();
-        Subsite::$use_session_subsiteid = true;
-
         $subsites->each(function ($subsite) use ($defaultSetNames) {
             Subsite::changeSubsite($subsite->ID);
 
@@ -52,6 +50,5 @@ class MenuSetExtension extends DataExtension
                 }
             }
         });
-        Subsite::$use_session_subsiteid = false;
     }
 }

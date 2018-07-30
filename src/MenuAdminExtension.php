@@ -2,25 +2,21 @@
 
 namespace Guttmann\SilverStripe;
 
-use Extension;
-use Subsite;
+use Heyday\MenuManager\MenuSet;
+use SilverStripe\Core\Extension;
+use SilverStripe\Subsites\State\SubsiteState;
 
 class MenuAdminExtension extends Extension
 {
-
     public function updateEditForm($form)
     {
-        $gridField = $form->Fields()->fieldByName('MenuSet');
-
+        $gridField = $form->Fields()->fieldByName(MenuSet::class);
         if($gridField) {
             $list = $gridField->getList();
             $filteredList = $list->filter(array(
-                'SubsiteID' => Subsite::currentSubsiteID()
+                'SubsiteID' => SubsiteState::singleton()->getSubsiteId()
             ));
-
             $gridField->setList($filteredList);
         }
-
     }
-
 }

@@ -1,10 +1,14 @@
-MenuItem:
+---
+Name: menu-manager-subsites
+---
+
+Heyday\MenuManager\MenuItem:
   extensions:
     - Guttmann\SilverStripe\MenuItemExtension
-MenuSet:
+Heyday\MenuManager\MenuSet:
   extensions:
     - Guttmann\SilverStripe\MenuSetExtension
-MenuAdmin:
+Heyday\MenuManager\MenuAdmin:
   extensions:
-    - SubsiteMenuExtension
+    - SilverStripe\Subsites\Extensions\SubsiteMenuExtension
     - Guttmann\SilverStripe\MenuAdminExtension
