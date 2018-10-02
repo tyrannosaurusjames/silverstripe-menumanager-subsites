@@ -1,11 +1,11 @@
 {
-  "name": "guttmann/silverstripe-menumanager-subsites",
+  "name": "robbyahn/silverstripe-menumanager-subsites",
   "type": "silverstripe-module",
   "license": "MIT",
   "authors": [
     {
-      "name": "James Goodman",
-      "homepage": "https://github.com/guttmann"
+      "name": "robby ahn",
+      "homepage": "https://github.com/robbyahn"
     }
   ],
   "require": {
