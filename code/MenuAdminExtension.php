@@ -12,12 +12,14 @@ class MenuAdminExtension extends Extension
     {
         $gridField = $form->Fields()->fieldByName('MenuSet');
 
-        $list = $gridField->getList();
-        $filteredList = $list->filter(array(
-            'SubsiteID' => Subsite::currentSubsiteID()
-        ));
+        if($gridField){
+	        $list = $gridField->getList();
+	        $filteredList = $list->filter(array(
+	            'SubsiteID' => Subsite::currentSubsiteID()
+	        ));
 
-        $gridField->setList($filteredList);
+	        $gridField->setList($filteredList);
+    	}
     }
 
 }
