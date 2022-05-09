@@ -12,3 +12,6 @@ Heyday\MenuManager\MenuAdmin:
   extensions:
     - SilverStripe\Subsites\Extensions\SubsiteMenuExtension
     - Guttmann\SilverStripe\MenuAdminExtension
+Heyday\MenuManager\MenuManagerTemplateProvider:
+  extensions:
+    - Guttmann\SilverStripe\MenuManagerTemplateProviderExtension
