@@ -9,9 +9,9 @@
     }
   ],
   "require": {
-    "silverstripe/cms": "^4",
-    "heyday/silverstripe-menumanager": "^3",
-    "silverstripe/subsites": "^2.0"
+    "silverstripe/cms": "^5",
+    "heyday/silverstripe-menumanager": "^4",
+    "silverstripe/subsites": "^3"
   },
   "autoload": {
     "psr-4": {
